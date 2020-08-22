@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:background="@color/color05">
+
+    <!-- When/Where -->
+    <TextView
+        android:id="@+id/tvTitleMatchLive"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@color/color07"
+        android:fontFamily="@font/tccm"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:textAllCaps="true"
+        android:textColor="@color/color04"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="AHORA/LIGA MX/ESTADIO UNIVERSITARIO/FINALES" />
+
+    <!-- Live Result -->
+    <TextView
+        android:id="@+id/tvSubtitleMatch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/twcenmt_condensed_bold"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:text="@string/live_results"
+        android:textAllCaps="true"
+        android:textColor="@color/color02"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleMatchLive" />
+
+    <LinearLayout
+        android:id="@+id/llLiveScoreContainer"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/see_button"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitleMatch">
+
+        <!-- Local Team Logo -->
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center|end">
+
+            <ImageView
+                android:id="@+id/imgLocalTeamLogo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                tools:src="@tools:sample/avatars" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="12dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Local Team Title -->
+            <TextView
+                android:id="@+id/tvLocalTeamName"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tccm"
+                android:lines="1"
+                android:maxWidth="65dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/color06"
+                tools:text="Tigres" />
+
+            <!-- Minute Local -->
+            <TextView
+                android:id="@+id/local_team_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tccm"
+                android:textColor="@color/color02"
+                android:textSize="30sp"
+                tools:text="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Minute Title -->
+            <TextView
+                android:id="@+id/minute_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tccm"
+                android:text="@string/minute"
+                android:textAllCaps="true"
+                android:textColor="@color/color06" />
+
+            <!-- Minute Time -->
+            <TextView
+                android:id="@+id/tvMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tccm"
+                android:textColor="@color/color02"
+                android:textSize="30sp"
+                tools:text="45" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Visitor Team Title -->
+            <TextView
+                android:id="@+id/tvVisitorTeamTitle"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tccm"
+                android:lines="1"
+                android:maxWidth="65dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/color06"
+                tools:text="Queretaro" />
+
+            <!-- Minute Visitor -->
+            <TextView
+                android:id="@+id/visitor_team_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tccm"
+                android:textColor="@color/color02"
+                android:textSize="30sp"
+                tools:text="1" />
+
+        </LinearLayout>
+
+        <!-- Local Team Logo -->
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center|start">
+
+            <!-- Visitor Team Logo -->
+            <ImageView
+                android:id="@+id/imgVisitorTeamLogo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                tools:src="@tools:sample/avatars" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:background="@drawable/background_gradient_black"
+        app:layout_constraintBottom_toTopOf="@id/tvPredictionsTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Predictions Title -->
+    <TextView
+        android:id="@+id/tvPredictionsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color07"
+        android:fontFamily="@font/tccm"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/your_prediction"
+        android:textAllCaps="true"
+        android:textColor="@color/color04"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llLiveScoreContainer" />
+
+    <View
+        android:id="@+id/vBackgroundBottom"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/color07"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPredictionsTitle" />
+
+    <Button
+        android:id="@+id/see_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/button_rounded_yellow"
+        android:fontFamily="@font/tccm"
+        android:text="@string/see"
+        app:layout_constraintBottom_toBottomOf="@id/vBackgroundBottom"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPredictionsTitle" />
+
+    <LinearLayout
+        android:id="@+id/score_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/vBackgroundBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/see_button"
+        app:layout_constraintTop_toTopOf="@id/vBackgroundBottom" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color01">#FBFF0D</color>
+    <color name="color02">#000000</color>
+    <color name="color03">#7CBC30</color>
+    <color name="color04">#FFFFFF</color>
+    <color name="color05">#EFEFEF</color>
+    <color name="color06">#6D6D6D</color>
+    <color name="color07">#F22599DC</color>
+    <color name="color08">#2A0E0B</color>
+    <color name="color09">#C64A1F</color>
+
+    <!--  Variations  -->
+    <color name="color02_15">#26000000</color>
+</resources>

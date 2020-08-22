@@ -1,0 +1,70 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color01</item>
+        <item name="colorPrimaryDark">@color/color02</item>
+        <item name="colorAccent">@color/color03</item>
+    </style>
+
+    <style name="AppTheme.Launcher" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Menu Items -->
+    <style name="MenuTitles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color02</item>
+        <item name="android:fontFamily">@font/tccm</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="MenuButton">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Dashboard Score -->
+    <style name="MainFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color04</item>
+        <item name="android:fontFamily">@font/twcenmt_condensed_bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SmallFont">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color04</item>
+        <item name="android:fontFamily">@font/twcenmt_condensed_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ScoreVaue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color01</item>
+        <item name="android:fontFamily">@font/digital7</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:background">@color/color02</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+</resources>

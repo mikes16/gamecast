@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">GameCast</string>
+    <string name="gamecast">GameCast</string>
+    <string name="eight">8</string>
+    <string name="c">C</string>
+
+    <!-- DASHBOARD -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard">dashboard</string>
+    <string name="level">Level:</string>
+    <string name="more_info">More Information</string>
+    <string name="pool">Pools</string>
+    <string name="points">Points</string>
+    <string name="level_up">Level Up</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="see_friends">See all friends</string>
+    <string name="find_friends">Find\nFriends</string>
+    <string name="create_pool">Create\nPool</string>
+    <string name="empty_friends">No Friends to Show</string>
+    <string name="zero">0</string>
+    <string name="user_default">User default</string>
+    <string name="level_default">Not in Rank</string>
+    <string name="my_profile">My Profile</string>
+    <string name="configuration">Settings</string>
+    <string name="my_pools">My Pools</string>
+    <string name="minute">Minute</string>
+    <string name="live_results">Live Result</string>
+    <string name="your_prediction">Your Forecast</string>
+    <string name="see">See</string>
+    <string name="dash" translatable="false">-</string>
+    <string name="edit">Edit</string>
+    <string name="close">Close</string>
+
+
+    <!--CONTENT DESCRIPTION IMAGES-->
+    <string name="menu_button_desc">Menu</string>
+    <string name="cd_background_dashboard">Stadium</string>
+    <string name="cd_background_profile">Lockers</string>
+    <string name="cd_profile_image">Profile</string>
+</resources>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".splash.SplashScreenFragment">
+
+    <!-- BACKGROUND -->
+    <ImageView
+        android:id="@+id/background_container"
+        android:layout_width="match_parent"
+        android:layout_height="232dp"
+        android:background="#a3a3a9"
+        android:contentDescription="@string/cd_background_dashboard"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_dashboard_background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <!-- PROFILE IMAGE -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_container"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="20sp"
+        android:elevation="2dp"
+        app:cardBackgroundColor="@color/color03"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_profile_image"
+            android:src="@drawable/ic_dashboard_profile" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- NAME -->
+    <TextView
+        android:id="@+id/profile_name"
+        style="@style/MainFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:lines="1"
+        android:text="@string/user_default"
+        app:layout_constraintLeft_toRightOf="@id/profile_container"
+        app:layout_constraintRight_toLeftOf="@id/shadow"
+        app:layout_constraintTop_toTopOf="@id/profile_container"
+        tools:text="@tools:sample/full_names[4]" />
+
+    <!-- LEVEL LABEL -->
+    <TextView
+        android:id="@+id/level_label"
+        style="@style/MainFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/level"
+        app:layout_constraintLeft_toLeftOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        tools:text="Nivel:" />
+
+    <TextView
+        android:id="@+id/level_value"
+        style="@style/MainFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:lines="1"
+        android:text="@string/level_default"
+        android:textColor="@color/color03"
+        app:layout_constraintLeft_toRightOf="@id/level_label"
+        app:layout_constraintRight_toRightOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        tools:text="Verde/10" />
+
+    <!-- MORE INFORMATION -->
+    <TextView
+        android:id="@+id/more_info"
+        style="@style/MainFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/more_info"
+        app:layout_constraintEnd_toEndOf="@id/profile_name"
+        app:layout_constraintStart_toStartOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/level_label" />
+
+    <!-- QUINIELA -->
+    <TextView
+        android:id="@+id/pools_title"
+        style="@style/SmallFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pool"
+        app:layout_constraintLeft_toLeftOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/more_info" />
+
+    <!-- POINTS -->
+    <TextView
+        android:id="@+id/points_title"
+        style="@style/SmallFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/points"
+        app:layout_constraintLeft_toRightOf="@id/pools_title"
+        app:layout_constraintRight_toLeftOf="@id/level_up_title"
+        app:layout_constraintTop_toBottomOf="@id/more_info" />
+
+    <!-- Level up -->
+    <TextView
+        android:id="@+id/level_up_title"
+        style="@style/SmallFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/level_up"
+        app:layout_constraintLeft_toRightOf="@id/points_title"
+        app:layout_constraintRight_toLeftOf="@id/shadow"
+        app:layout_constraintTop_toBottomOf="@id/more_info" />
+
+    <!-- Shadow Pools -->
+    <View
+        android:id="@+id/shadow_pool"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="@id/pool_value"
+        app:layout_constraintEnd_toEndOf="@id/level_up_title"
+        app:layout_constraintStart_toStartOf="@id/pools_title"
+        app:layout_constraintTop_toBottomOf="@id/level_up_title" />
+
+    <!-- Pool Value -->
+    <TextView
+        android:id="@+id/pool_value"
+        style="@style/ScoreVaue"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="@id/pools_title"
+        app:layout_constraintStart_toStartOf="@id/pools_title"
+        app:layout_constraintTop_toBottomOf="@id/level_up_title"
+        tools:text="10" />
+
+    <!-- Points Value -->
+    <TextView
+        android:id="@+id/points_value"
+        style="@style/ScoreVaue"
+        android:gravity="center"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="@id/points_title"
+        app:layout_constraintStart_toStartOf="@id/points_title"
+        app:layout_constraintTop_toBottomOf="@id/level_up_title"
+        tools:text="120" />
+
+    <!-- Level Up Value -->
+    <TextView
+        android:id="@+id/level_up_value"
+        style="@style/ScoreVaue"
+        android:gravity="center"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="@id/level_up_title"
+        app:layout_constraintStart_toStartOf="@id/level_up_title"
+        app:layout_constraintTop_toBottomOf="@id/level_up_title"
+        tools:text="120" />
+
+    <!-- Edit Profile Button-->
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_rounded_yellow"
+        android:fontFamily="@font/tccm"
+        android:text="@string/edit_profile"
+        app:layout_constraintLeft_toLeftOf="@id/profile_name"
+        app:layout_constraintRight_toRightOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/shadow_pool" />
+
+    <!--RIGHT SHADOW-->
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:background="#80000000"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!--Look for friends-->
+    <TextView
+        android:id="@+id/see_friends"
+        style="@style/MainFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_friends"
+        app:layout_constraintLeft_toRightOf="@id/shadow"
+        app:layout_constraintRight_toLeftOf="@id/shadow"
+        app:layout_constraintTop_toTopOf="@id/profile_name" />
+
+    <!-- Search Friends Button -->
+    <Button
+        android:id="@+id/search_friends"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_rounded_yellow"
+        android:fontFamily="@font/tccm"
+        android:text="@string/find_friends"
+        app:layout_constraintLeft_toLeftOf="@id/shadow"
+        app:layout_constraintTop_toBottomOf="@id/see_friends"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.18" />
+
+    <!-- Create Pool Button-->
+    <Button
+        android:id="@+id/create_pool"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/button_rounded_yellow"
+        android:fontFamily="@font/tccm"
+        android:text="@string/create_pool"
+        app:layout_constraintRight_toRightOf="@id/shadow"
+        app:layout_constraintTop_toBottomOf="@id/see_friends"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.18" />
+
+    <!-- Friends pools -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friends_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/shadow"
+        app:layout_constraintLeft_toLeftOf="@id/shadow"
+        app:layout_constraintRight_toRightOf="@id/shadow"
+        app:layout_constraintTop_toBottomOf="@id/search_friends" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/tccm"
+        android:gravity="center"
+        android:text="@string/empty_friends"
+        android:textAlignment="center"
+        android:textColor="@color/color04"
+        app:layout_constraintBottom_toBottomOf="@id/shadow"
+        app:layout_constraintLeft_toLeftOf="@id/shadow"
+        app:layout_constraintRight_toRightOf="@id/shadow"
+        app:layout_constraintTop_toBottomOf="@id/search_friends" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMatchesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/background_container"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <include
+        layout="@layout/menu_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <include
+        layout="@layout/toolbar_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

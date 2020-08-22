@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color05">
+
+    <!-- When/Where -->
+    <TextView
+        android:id="@+id/tvTitleMatch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="5 HORAS/LIGA MX/ESTADIO UNIVERSITARIO/FINALES"
+        android:textAllCaps="true"
+        android:textColor="@color/color06"
+        android:fontFamily="@font/tccm"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Predictions Title -->
+    <TextView
+        android:id="@+id/tvPredictionsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/your_prediction"
+        android:textAllCaps="true"
+        android:textColor="@color/color06"
+        android:fontFamily="@font/tccm"
+        android:textSize="15sp"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleMatch"/>
+
+    <!-- TEAMS NAME CONTAINER -->
+    <LinearLayout
+        android:id="@+id/llTeamsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/edit_btn"
+        app:layout_constraintTop_toBottomOf="@id/tvPredictionsTitle">
+
+        <!-- Local Team Logo -->
+        <ImageView
+            android:id="@+id/imgLocalTeamLogo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            tools:src="@drawable/ic_dashboard_profile"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Local Team Title -->
+            <TextView
+                android:id="@+id/tvLocalTeamName"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/color06"
+                android:fontFamily="@font/tccm"
+                android:gravity="center"
+                tools:text="Tigres"/>
+
+            <TextView
+                android:id="@+id/tvLocalTeamScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/color02"
+                android:fontFamily="@font/tccm"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:background="@color/color02_15"
+                tools:text="1"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color02"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Visitor Team Title -->
+            <TextView
+                android:id="@+id/tvVisitorTeamTitle"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/color06"
+                android:fontFamily="@font/tccm"
+                android:gravity="center"
+                tools:text="Rayados"/>
+
+            <TextView
+                android:id="@+id/tvVisitorTeamScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color02"
+                android:fontFamily="@font/tccm"
+                android:textSize="30sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@color/color02_15"
+                android:layout_gravity="center"
+                tools:text="1"/>
+        </LinearLayout>
+
+        <!-- Visitor Team Logo -->
+        <ImageView
+            android:id="@+id/imgVisitorTeamLogo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintLeft_toRightOf="@id/tvVisitorTeamTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvPredictionsTitle"
+            app:layout_constraintBottom_toTopOf="@id/vBackgroundBottom"
+            tools:src="@drawable/ic_dashboard_profile"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/edit_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/edit"
+        android:fontFamily="@font/tccm"
+        android:background="@drawable/button_rounded_yellow"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/llTeamsContainer"
+        app:layout_constraintBottom_toBottomOf="@id/llTeamsContainer"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
